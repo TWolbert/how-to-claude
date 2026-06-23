@@ -2,15 +2,15 @@ services:
   how-to-claude:
     build: .
     ports:
-      - "9039:9039"
+      - '9039:9039'
     environment:
       - DATABASE_URL=/data/local.db
       - APP_NAME=How to Claude
-      - AUTH_REGISTER_ENABLED=true
+      - AUTH_REGISTER_ENABLED=false
     volumes:
       - how-to-claude-data:/data
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:9039/"]
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://127.0.0.1:9039/']
       interval: 10s
       timeout: 5s
       retries: 5
