@@ -8,4 +8,7 @@ services:
       - APP_NAME=How to Claude
       - AUTH_REGISTER_ENABLED=true
     volumes:
-      - ./local.db:/data/local.db
+      - how-to-claude-data:/data
+
+volumes:
+  how-to-claude-data:

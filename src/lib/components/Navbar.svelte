@@ -14,12 +14,12 @@
 </script>
 
 <nav
-	class="fixed top-4 z-50 flex font-body transition-[left] duration-75 {isLegenda
-		? 'left-480 right-0'
-		: 'left-0 right-0'} justify-center"
+	class="fixed top-4 z-50 flex font-body transition-[left] duration-75 justify-center px-4 left-0 right-0 {isLegenda
+		? 'md:left-480'
+		: ''}"
 >
 	<div
-		class="flex h-12 items-center justify-between gap-6 rounded-full border border-white/20 bg-white/50 px-5 shadow-lg shadow-black/5 backdrop-blur-2xl min-w-[500px]"
+		class="flex h-12 items-center justify-between gap-6 rounded-full border border-white/20 bg-white/50 px-5 shadow-lg shadow-black/5 backdrop-blur-2xl w-full sm:w-auto sm:min-w-[500px]"
 	>
 		<a href={resolve('/')} class="text-sm font-semibold tracking-tight">{appName}</a>
 

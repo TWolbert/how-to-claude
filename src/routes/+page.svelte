@@ -3,12 +3,12 @@
 	let { data } = $props();
 </script>
 
-<div class="flex h-screen flex-col items-center justify-center gap-3">
-	<h1 class="text-5xl font-bold font-heading">
+<div class="flex h-screen flex-col items-center justify-center gap-3 px-4 text-center">
+	<h1 class="text-3xl md:text-5xl font-bold font-heading">
 		<span class="text-claude-accent">Claude</span> na je 50e, hoe navigeer je dat?
 	</h1>
 	<p>Leer hier over MCP, Claude skills, wat een 'context window' uberhaupt is, en meer.</p>
-	<div class="flex gap-2">
+	<div class="flex flex-wrap gap-2 justify-center">
 		{#if data.user}
 			<a
 				class="rounded-xl bg-claude-accent px-3 py-2 text-claude-bg shadow-md backdrop-blur-lg"

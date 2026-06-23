@@ -42,7 +42,7 @@
 	}));
 </script>
 
-<div class="pointer-events-none fixed inset-0 z-0">
+<div class="pointer-events-none fixed inset-0 z-0 max-md:hidden">
 	<div class="flex flex-col gap-24" style="transform: rotate(-12deg) scale(1.4) translateY(-10%);">
 		{#each rows as row, ri (ri)}
 			<div class="flex gap-24" class:ml-32={row.offset}>

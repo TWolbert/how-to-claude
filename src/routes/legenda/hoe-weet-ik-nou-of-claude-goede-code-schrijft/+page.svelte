@@ -76,6 +76,7 @@ Vermeld in je antwoord welke punten je hebt aangepast.</pre>
 	Twee minimale API-servers met elk twee endpoints (<code class="font-mono">/api/hello</code> en
 	<code class="font-mono">/api/data</code>):
 </p>
+<div class="overflow-x-auto">
 <table class="mt-2 w-full border-collapse text-sm">
 	<thead>
 		<tr class="border-b border-claude-muted/20 text-left">
@@ -110,11 +111,13 @@ Vermeld in je antwoord welke punten je hebt aangepast.</pre>
 		</tr>
 	</tbody>
 </table>
+</div>
 
 <h3 class="mt-4 font-bold text-lg">Benchmark resultaten</h3>
 <p class="mt-2">
 	Gemeten met <code class="font-mono">wrk</code> (50K requests, 100 concurrent clients, 30 seconden):
 </p>
+<div class="overflow-x-auto">
 <table class="mt-2 w-full border-collapse text-sm">
 	<thead>
 		<tr class="border-b border-claude-muted/20 text-left">
@@ -145,6 +148,7 @@ Vermeld in je antwoord welke punten je hebt aangepast.</pre>
 		</tr>
 	</tbody>
 </table>
+</div>
 
 <h3 class="mt-4 font-bold text-lg">Wat zegt dit?</h3>
 <ul class="mt-2 ml-6 list-disc space-y-1">

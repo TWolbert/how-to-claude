@@ -4,7 +4,7 @@
 	let { form } = $props();
 </script>
 
-<div class="flex h-screen flex-col items-center justify-center">
+<div class="flex h-screen flex-col items-center justify-center px-4">
 	<h1 class="mb-8 text-4xl font-bold font-heading">
 		<span class="text-claude-accent">Maak</span> een account
 	</h1>

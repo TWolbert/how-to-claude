@@ -74,6 +74,7 @@
 </ul>
 
 <h2 class="mt-8 font-bold text-xl">Vergelijking op een rijtje</h2>
+<div class="overflow-x-auto">
 <table class="mt-2 w-full border-collapse text-sm">
 	<thead>
 		<tr class="border-b border-claude-muted/20 text-left">
@@ -120,6 +121,7 @@
 		</tr>
 	</tbody>
 </table>
+</div>
 
 <h2 class="mt-8 font-bold text-xl">Welke kies je?</h2>
 <ul class="mt-2 ml-6 list-disc space-y-1">
