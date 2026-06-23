@@ -15,6 +15,7 @@ RUN npm ci --omit=dev
 COPY --from=builder /app/build build/
 COPY --from=builder /app/src src/
 COPY --from=builder /app/drizzle drizzle/
+COPY --from=builder /app/benchmark benchmark/
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=9039

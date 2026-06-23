@@ -18,4 +18,9 @@ code {
 	color: var(--color-claude-bg);
 	padding: 4px 6px;
 	border-radius: 10px;
+	overflow-wrap: break-word;
+}
+
+main {
+	overflow-wrap: break-word;
 }
