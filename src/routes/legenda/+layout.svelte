@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { resolve } from '$app/paths';
 	let { children } = $props();
 
@@ -15,6 +16,8 @@
 			href: resolve('/legenda/hoe-weet-ik-nou-of-claude-goede-code-schrijft')
 		}
 	];
+
+	let isOnSubPage = $derived($page.url.pathname !== resolve('/legenda'));
 </script>
 
 <div class="flex min-h-screen">
@@ -38,22 +41,38 @@
 			{/each}
 		</ul>
 	</aside>
-	<main class="flex-1 p-8 max-md:p-4">
-		<nav
-			class="md:hidden mb-6 -mx-4 px-4 overflow-x-auto flex gap-2 pb-2 border-b border-claude-muted/20"
-		>
+	<main class="flex-1 p-8 max-md:p-4 max-md:pt-20">
+		{#if isOnSubPage}
 			<a
 				href={resolve('/legenda')}
-				class="whitespace-nowrap text-sm font-semibold text-claude-accent shrink-0">← Legenda</a
+				class="md:hidden mb-6 flex items-center gap-1 text-sm font-semibold text-claude-accent"
 			>
-			{#each items as item (items.indexOf(item))}
-				<a
-					href={item.href}
-					class="whitespace-nowrap shrink-0 rounded-lg px-2 py-1 text-sm transition-colors hover:bg-claude-muted/10"
-					>{item.label}</a
-				>
-			{/each}
-		</nav>
-		{@render children()}
+				← Legenda
+			</a>
+		{/if}
+
+		{#if !isOnSubPage}
+			<div class="md:hidden">
+				<h1 class="mb-6 text-2xl font-bold font-heading">
+					<span class="text-claude-accent">Legenda</span>
+				</h1>
+				<ul class="space-y-2">
+					{#each items as item (items.indexOf(item))}
+						<li>
+							<a
+								href={item.href}
+								class="block rounded-lg border border-claude-muted/20 px-4 py-3 text-sm transition-colors hover:bg-claude-muted/10"
+							>
+								{item.label}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+		{/if}
+
+		<div class:max-md:hidden={!isOnSubPage}>
+			{@render children()}
+		</div>
 	</main>
 </div>
