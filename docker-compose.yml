@@ -1,0 +1,11 @@
+services:
+  how-to-claude:
+    build: .
+    ports:
+      - "9039:9039"
+    environment:
+      - DATABASE_URL=/data/local.db
+      - APP_NAME=How to Claude
+      - AUTH_REGISTER_ENABLED=true
+    volumes:
+      - ./local.db:/data/local.db

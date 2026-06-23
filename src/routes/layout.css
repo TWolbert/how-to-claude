@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-heading: 'DM Serif Display', serif;
+	--font-body: 'Inter', sans-serif;
+	--color-claude-accent: #cc8b3c;
+	--color-claude-bg: #fafafa;
+	--color-claude-surface: #ffffff;
+	--color-claude-fg: #1a1a1a;
+	--color-claude-muted: #737373;
+}
+
+code {
+	background-color: var(--color-claude-fg);
+	color: var(--color-claude-bg);
+	padding: 4px 6px;
+	border-radius: 10px;
+}

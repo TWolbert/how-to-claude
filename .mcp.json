@@ -1,0 +1,12 @@
+{
+	"mcpServers": {
+		"svelte": {
+			"type": "http",
+			"url": "https://mcp.svelte.dev/mcp"
+		},
+		"how-to-claude": {
+			"command": "npx",
+			"args": ["tsx", "src/mcp/server.ts"]
+		}
+	}
+}
