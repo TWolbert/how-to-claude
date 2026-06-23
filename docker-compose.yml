@@ -6,7 +6,7 @@ services:
     environment:
       - DATABASE_URL=/data/local.db
       - APP_NAME=How to Claude
-      - AUTH_REGISTER_ENABLED=false
+      - AUTH_REGISTER_ENABLED=true
     volumes:
       - how-to-claude-data:/data
     healthcheck:
